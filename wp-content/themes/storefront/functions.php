@@ -71,3 +71,10 @@ if ( version_compare( get_bloginfo( 'version' ), '4.7.3', '>=' ) && ( is_admin()
  */
 
 require 'inc/cpt/city_post_type.php';   
+require 'inc/widget/city_temperature_widget.php';
+
+function jquery_enqueue_scripts() {
+    wp_enqueue_script('jquery');
+    // ... other scripts you might need
+}
+add_action('wp_enqueue_scripts', 'jquery_enqueue_scripts');
